@@ -37,7 +37,7 @@ function RowPost(props) {
         <h2>{props.genre}</h2>
         <div className="posters">          
             {rowpost.map((obj, index) => {    
-              return( <img onClick={()=>{handleMovie(obj.id)}} className={props.index>1 ? 'small-poster' : 'poster'} src={`${rowpost ? imageUrl+obj.poster_path : ''}`} alt="poster" />)                             
+              return( <img key={index} onClick={()=>{handleMovie(obj.id)}} className={props.index>1 ? 'small-poster' : 'poster'} src={`${rowpost ? imageUrl+obj.poster_path : ''}`} alt="poster" />)                             
             })}
         </div>  
             {urlId ? <YouTube opts={opts} videoId={urlId}/> : ''} 
