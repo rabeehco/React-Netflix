@@ -30,7 +30,7 @@ function RowPost(props) {
       axios.get(props.array).then((response) => {
         setrow(response.data.results) 
       }).catch((err) => alert('Network Error'))
-    }, [rowpost]) 
+    }, []) 
 
   return (
     <div className='row'>      
